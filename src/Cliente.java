@@ -25,8 +25,6 @@ public class Cliente {
         tc.start();
         to.start();
 
-       
-
     }
 }
 

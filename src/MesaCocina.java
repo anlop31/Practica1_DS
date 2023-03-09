@@ -23,6 +23,7 @@ public class MesaCocina extends Mesa{
     @Override
     public void run(){
         System.out.println("El ID es " + getID() + "COCINA");
+        System.out.println("ID = " + getID() + " antes: " + this.isAlive());
     }
 
     //getID() y run() no se implementan porque

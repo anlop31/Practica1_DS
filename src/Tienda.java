@@ -20,12 +20,30 @@ public abstract class Tienda extends Thread {
     public void run(){
         long inicio = System.currentTimeMillis();
         
-        while(System.currentTimeMillis() - inicio < 60000)
-            System.out.println(System.currentTimeMillis() - inicio);
-
-        for (Mesa m: mesas){
-            m.run();            
+        while(System.currentTimeMillis() - inicio < 6000) {
+         //   System.out.println(System.currentTimeMillis() - inicio);
         }
+        for (Mesa m: mesas){
+            m.start();            
+        }
+
+        while(System.currentTimeMillis() - inicio < 3000) {
+            //ESPERAMOS    ??
+        }
+        int vender = (mesas.size()*2) / 10; 
+        try {
+            for (int i = 0; i < vender; i++){
+                mesas.get(i).interrupt();
+                mesas.get(i).join();
+                System.out.println("ID = " + i + " después: " + mesas.get(i).isAlive());
+
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Exception handled");
+        }
+        
+
     }
     
     public ArrayList<Mesa> getMesas(){
