@@ -7,6 +7,13 @@
  *
  * @author ana
  */
+
 public class TiendaCocina extends Tienda{
     
+    public TiendaCocina(int N){
+        super(N);
+        for (int i = 0; i < N; i ++){
+            mesas.add(new MesaCocina(i, 1.2));
+        }
+    }
 }

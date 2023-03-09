@@ -13,6 +13,23 @@ public class Cliente {
     public void venderMesas(int nMesas/*, tipo*/){
         
     }
+
+    public static void main(String[] args) {
+
+        //MAIN DE PRUEBA PARA COMPROBAR LOS HILOS Y EL FUNCIONAMIENTO DE TIENDA Y MESA
+        int N = 10;
+        TiendaCocina tc = new TiendaCocina(N);
+        TiendaOficina to = new TiendaOficina(N);
+        
+        //En vez de llamar directamente a run() hay que llamar a start(), que llama a run()
+        tc.start();
+        to.start();
+
+       
+
+    }
 }
+
+
 
 

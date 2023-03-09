@@ -9,15 +9,23 @@ import java.util.ArrayList;
  *
  * @author ana
  */
-public class Tienda extends Thread {
+public abstract class Tienda extends Thread {
     public ArrayList<Mesa> mesas;
     
+    public Tienda(int N){
+        mesas = new ArrayList<Mesa>();
+    }
+
     @Override
     public void run(){
         long inicio = System.currentTimeMillis();
         
         while(System.currentTimeMillis() - inicio < 60000)
             System.out.println(System.currentTimeMillis() - inicio);
+
+        for (Mesa m: mesas){
+            m.run();            
+        }
     }
     
     public ArrayList<Mesa> getMesas(){

@@ -7,13 +7,28 @@
  *
  * @author ana
  */
-public class Mesa extends Thread{
+
+public abstract class Mesa extends Thread{
+    
+    private int ID;
+
+    public Mesa(int ID){
+        this.ID = ID;
+    }
+
+    public int getID(){
+        return this.ID;
+    }
+
     @Override
     public void run(){
+        //PARA PROBAR QUE TODO VA BIEN
+       // System.out.println("El ID es " + getID());
     }
-    
+
+/*     
     public void venderMesa(){
-        stop(); // ?? se vende esta mesa, se para este thread?
+        this.stop(); // ?? se vende esta mesa, se para este thread?
     }
-    
+*/
 }
