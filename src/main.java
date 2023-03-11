@@ -9,11 +9,14 @@
  * @author ana
  */
 public class main {
-    public static void main(String [] args){
+    public static void main(String [] args){ // main de prueba
         FactoriaMuebles factoria = new FactoriaTiendaMesaCocina();
         
-        Mesa mesacocina1 = factoria.crearMesa();
-        mesacocina1.start();
+        int ID1 = 1;
+        String color1 = "verde";
+        
+        // Mesa mesacocina1 = factoria.crearMesa(ID1, color1);
+        // mesacocina1.start();
         
     }
 }

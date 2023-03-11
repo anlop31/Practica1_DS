@@ -8,6 +8,6 @@
  * @author ana
  */
 public abstract class FactoriaMuebles {
-    public abstract Mesa crearMesa();
-    public abstract Tienda crearTienda(); 
+    public abstract Mesa crearMesa(int ID);
+    public abstract Tienda crearTienda(int N); 
 }

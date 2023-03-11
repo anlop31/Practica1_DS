@@ -19,18 +19,13 @@ public abstract class Tienda extends Thread {
     @Override
     public void run(){
         long inicio = System.currentTimeMillis();
-        
-        while(System.currentTimeMillis() - inicio < 6000) {
-         //   System.out.println(System.currentTimeMillis() - inicio);
-        }
         for (Mesa m: mesas){
             m.start();            
         }
-
-        while(System.currentTimeMillis() - inicio < 3000) {
+        while(System.currentTimeMillis() - inicio < 10000) {
             //ESPERAMOS    ??
         }
-        int vender = (mesas.size()*2) / 10; 
+        int vender = (mesas.size()*2) / 10; // el 20 por ciento (??
         try {
             for (int i = 0; i < vender; i++){
                 mesas.get(i).interrupt();
@@ -42,7 +37,9 @@ public abstract class Tienda extends Thread {
         catch (Exception e) {
             System.out.println("Exception handled");
         }
-        
+        while(System.currentTimeMillis() - inicio < 30000) { 
+            //System.out.println(System.currentTimeMillis() - inicio);
+        }
 
     }
     

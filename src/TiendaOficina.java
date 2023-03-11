@@ -13,7 +13,10 @@ public class TiendaOficina extends Tienda{
     public TiendaOficina(int N){
         super(N);
         for (int i = 0; i < N; i ++){
-            mesas.add(new MesaOficina(i, "azul"));
+            MesaOficina mesa = new MesaOficina(i);
+            mesa.setColor("azul");
+            //mesas.add(new MesaOficina(i, "azul"));
+            mesas.add(mesa);
         }
     }
 }

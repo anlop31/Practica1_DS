@@ -10,14 +10,14 @@
 public class FactoriaTiendaMesaCocina extends FactoriaMuebles {
     public FactoriaTiendaMesaCocina(){}
     
-    @Override public Mesa crearMesa(){
-        Mesa mesaCocina = new MesaCocina();
+    @Override public Mesa crearMesa(int ID){
+        Mesa mesaCocina = new MesaCocina(ID);
         
         return mesaCocina;
     }
     
-    @Override public Tienda crearTienda(){
-        Tienda tiendaCocina = new TiendaCocina();
+    @Override public Tienda crearTienda(int N){
+        Tienda tiendaCocina = new TiendaCocina(N);
         
         return tiendaCocina;
     }

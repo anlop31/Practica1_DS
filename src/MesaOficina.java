@@ -11,19 +11,23 @@ public class MesaOficina extends Mesa {
 
     private String color;
 
-    public MesaOficina(int ID, String color){
+    public MesaOficina(int ID){ // antes (int ID, string color
         super(ID);
-        this.color = color;
+        //this.color = color;
     }
 
     public String getColor(){
         return this.color;
     }
+    
+    public void setColor(String color){
+        this.color = color;
+    }
 
     @Override
     public void run(){
         //PARA PROBAR QUE TODO VA BIEN
-        System.out.println("El ID es " + getID() + "OFICINA");
+        System.out.println("El ID es " + getID() + " OFICINA");
     }
 
 
