@@ -15,8 +15,9 @@ public class TiendaCocina extends Tienda{
         for (int i = 0; i < N; i ++){
             MesaCocina mesa = new MesaCocina(i);
             mesa.setAltura(1.2);
-            // mesas.add(new MesaCocina(i, 1.2));
             mesas.add(mesa);
         }
+        
+        tipo = "cocina";
     }
 }

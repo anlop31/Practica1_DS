@@ -10,13 +10,25 @@
  */
 public class main {
     public static void main(String [] args){ // main de prueba
-        FactoriaMuebles factoria = new FactoriaTiendaMesaCocina();
+        FactoriaMuebles factoriaCocina = new FactoriaTiendaMesaCocina();
+        FactoriaMuebles factoriaOficina = new FactoriaTiendaMesaOficina();
+    
+        Cliente cliente = new Cliente();
+    
+        int N = 10; // número de mesas de cada tienda
+        int venta_cocina = N * 2/10;
+        int venta_oficina = N * 3/10;
         
-        int ID1 = 1;
-        String color1 = "verde";
+        // Creamos las tiendas
+        Tienda tc = factoriaCocina.crearTienda(N);
+        Tienda to = factoriaOficina.crearTienda(N);
         
-        // Mesa mesacocina1 = factoria.crearMesa(ID1, color1);
-        // mesacocina1.start();
-        
+        //En vez de llamar directamente a run() hay que llamar a start(), que llama a run()
+        tc.start();
+        to.start();
+    
+        cliente.comprarMesas(venta_cocina, tc); // 2 mesas de la tienda de cocina
+        cliente.comprarMesas(venta_oficina, to); // 3 mesas de la tienda de oficina
+
     }
 }

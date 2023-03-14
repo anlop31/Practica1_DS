@@ -15,8 +15,9 @@ public class TiendaOficina extends Tienda{
         for (int i = 0; i < N; i ++){
             MesaOficina mesa = new MesaOficina(i);
             mesa.setColor("azul");
-            //mesas.add(new MesaOficina(i, "azul"));
             mesas.add(mesa);
         }
+        
+        tipo = "oficina";
     }
 }

@@ -13,7 +13,7 @@ public class MesaOficina extends Mesa {
 
     public MesaOficina(int ID){ // antes (int ID, string color
         super(ID);
-        //this.color = color;
+        tipo = "oficina";
     }
 
     public String getColor(){
@@ -24,14 +24,5 @@ public class MesaOficina extends Mesa {
         this.color = color;
     }
 
-    @Override
-    public void run(){
-        //PARA PROBAR QUE TODO VA BIEN
-        System.out.println("El ID es " + getID() + " OFICINA");
-    }
-
-
-    //getID() y run() no se implementan porque
-    //son las de la clase padre
     
 }

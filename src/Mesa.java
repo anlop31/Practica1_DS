@@ -10,6 +10,7 @@
 
 public abstract class Mesa extends Thread{
     
+    String tipo = "";
     private int ID;
 
     public Mesa(int ID){
@@ -22,13 +23,8 @@ public abstract class Mesa extends Thread{
 
     @Override
     public void run(){
-        //PARA PROBAR QUE TODO VA BIEN
-       // System.out.println("El ID es " + getID());
+        System.out.println("El ID es " + getID() + " de tipo: " + tipo);
+        System.out.println("ID = " + getID() + " de mesa de tipo " + tipo + " antes: " + this.isAlive());
     }
 
-/*     
-    public void venderMesa(){
-        this.stop(); // ?? se vende esta mesa, se para este thread?
-    }
-*/
 }

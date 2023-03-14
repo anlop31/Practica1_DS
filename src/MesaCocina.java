@@ -13,7 +13,7 @@ public class MesaCocina extends Mesa{
 
     public MesaCocina(int ID){ // antes (int ID, double altura)
         super(ID);
-        //this.altura = altura;
+        tipo = "cocina";
     }
 
     public double getAltura(){
@@ -24,12 +24,4 @@ public class MesaCocina extends Mesa{
         this.altura = altura;
     }
 
-    @Override
-    public void run(){
-        System.out.println("El ID es " + getID() + " COCINA");
-        System.out.println("ID = " + getID() + " antes: " + this.isAlive());
-    }
-
-    //getID() y run() no se implementan porque
-    //son las de la clase padre
 }
